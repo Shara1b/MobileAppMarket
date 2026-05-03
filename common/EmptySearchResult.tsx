@@ -11,7 +11,6 @@ const EmptySearchResult = () => {
 
   return (
     <View style={styles.container}>
-      {/* Круг с иконкой */}
       <View style={styles.iconContainer}>
         <Ionicons name="search-outline" size={40} color="#9CA3AF" />
       </View>

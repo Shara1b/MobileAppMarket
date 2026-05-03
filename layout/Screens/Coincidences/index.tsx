@@ -1,15 +1,11 @@
-import StyledText from "@/components/StyledText";
-import { StyleSheet, View } from "react-native";
+import EmptyDailyMatches from "@/common/EmptyDailyMatches";
 
-const Coincidences = () => {
-    return (
-        <View>
-            <StyledText>Home</StyledText>
-        </View>
-    );
+export default function HomeScreen() {
+  const hasResults = false;
+
+  if (!hasResults) {
+    return <EmptyDailyMatches />;
+  }
+
+  return null;
 }
-
-const styles = StyleSheet.create({
-    
-})
-export default Coincidences

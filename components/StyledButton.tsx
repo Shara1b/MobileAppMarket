@@ -31,7 +31,8 @@ type StyledButtonProps = TouchableOpacityProps & {
     | "add-file-btn"
     | "tags-btn"
     | "tags-btn-active"
-    | "outline-btn";
+    | "outline-btn"
+    | "up-portfolio-btn";
   sizeIcon?: number;
   colorIcon?: string;
   skeletonDelay?: number;
@@ -79,6 +80,7 @@ const StyledButton: React.FC<StyledButtonProps> = ({
         variant === "tags-btn" ? styles.tags_btn : null,
         variant === "tags-btn-active" ? styles.tags_btn_active : null,
         variant === "outline-btn" ? styles.outline_btn : null,
+        variant === "up-portfolio-btn" ? styles.up_portfolio_btn : null,
         style,
       ]}
     >
@@ -224,6 +226,16 @@ const styles = StyleSheet.create({
     elevation: 0,
     alignSelf: "center",
     flexShrink: 0,
+  },
+  up_portfolio_btn: {
+    backgroundColor: COLORS.CARD_BG,
+    borderColor: COLORS.BG_CARD_ACTIVE,
+    borderRadius: 14,
+    borderWidth: 0.8,
+    padding: 17,
+    width: 300,
+    minHeight: 73,
+    elevation: 0,
   },
 });
 export default StyledButton;
