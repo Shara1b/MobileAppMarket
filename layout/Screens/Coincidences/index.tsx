@@ -1,6 +1,6 @@
 import EmptyDailyMatches from "@/common/EmptyDailyMatches";
 
-export default function HomeScreen() {
+export default function CoincidencesScreen() {
   const hasResults = false;
 
   if (!hasResults) {

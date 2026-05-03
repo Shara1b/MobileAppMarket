@@ -1,13 +1,11 @@
-import StyledText from "@/components/StyledText";
-import { StyleSheet, View } from "react-native";
+import EmptyFavorites from "@/common/EmptyFavorites";
 
-const Home = () => {
-  return (
-    <View>
-      <StyledText>Home</StyledText>
-    </View>
-  );
-};
+export default function HomeScreen() {
+  const hasResults = false;
 
-const styles = StyleSheet.create({});
-export default Home;
+  if (!hasResults) {
+    return <EmptyFavorites />;
+  }
+
+  return null;
+}
