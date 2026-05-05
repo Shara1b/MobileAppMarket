@@ -1,10 +1,10 @@
-import ServiceUnavailable from "@/common/ErrorScreen/ServiceUnavailable";
+import NotFound from "@/common/ErrorScreen/NotFound";
 
 export default function HomeScreen() {
   const hasResults = false;
 
   if (!hasResults) {
-    return <ServiceUnavailable />;
+    return <NotFound />;
   }
 
   return null;
