@@ -1,10 +1,10 @@
-import EmptyDailyMatches from "@/common/EmptyDailyMatches";
+import Forbidden from "@/common/ErrorScreen/Forbidden";
 
 export default function CoincidencesScreen() {
   const hasResults = false;
 
   if (!hasResults) {
-    return <EmptyDailyMatches />;
+    return <Forbidden />;
   }
 
   return null;
