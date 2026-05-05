@@ -15,9 +15,20 @@ const EmptyFavorites = () => {
         <Ionicons name="bookmark-outline" size={40} color="#9CA3AF" />
       </View>
 
-      <StyledText style={styles.title}>Нет сохранённых проектов</StyledText>
+      <StyledText variant="title" size="regular">
+        Нет сохранённых проектов
+      </StyledText>
 
-      <StyledText style={styles.subtitle}>
+      <StyledText
+        variant="subtitle-grey"
+        size="small"
+        style={{
+          textAlign: "center",
+          marginBottom: 24.4,
+          marginTop: 8,
+          width: 243,
+        }}
+      >
         Добавляйте интересные проекты в избранное, чтобы вернуться к ним позже
       </StyledText>
 
@@ -25,9 +36,9 @@ const EmptyFavorites = () => {
         onPress={handleAIPick}
         variant="transparment-border"
         style={{ width: 165, borderRadius: 14, borderWidth: 1.6 }}
-      >
-        <StyledText style={styles.buttonText}>Искать проекты</StyledText>
-      </StyledButton>
+        lable="Искать проекты"
+        variantText="button-text-blue"
+      />
     </View>
   );
 };
@@ -47,35 +58,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginBottom: 16,
-  },
-  title: {
-    width: 277,
-    fontSize: 20,
-    fontWeight: "700",
-    color: COLORS.TITLE_GREY,
-    lineHeight: 30,
-    fontFamily: "Inter",
-    textAlign: "center",
-    marginBottom: 8,
-  },
-  subtitle: {
-    maxWidth: 280,
-    fontSize: 14,
-    fontWeight: "400",
-    color: COLORS.SUBTITLE_GREY,
-    textAlign: "center",
-    marginBottom: 24.4,
-    lineHeight: 21,
-  },
-  buttonText: {
-    flex: 1,
-    width: 114,
-    fontSize: 13,
-    fontWeight: "600",
-    color: COLORS.PRIMARY_BUTTON_TEXT,
-    textAlign: "center",
-    fontFamily: "Inter",
-    lineHeight: 21,
   },
 });
 
