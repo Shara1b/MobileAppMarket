@@ -11,7 +11,6 @@ const EmptyDailyMatches = () => {
 
   return (
     <View style={styles.container}>
-      <View></View>
       <StarIconCircule
         width={80}
         height={80}
@@ -61,6 +60,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     paddingHorizontal: 60,
+    backgroundColor: "#fff",
   },
   iconContainer: {
     width: 80,

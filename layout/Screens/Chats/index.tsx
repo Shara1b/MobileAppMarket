@@ -1,15 +1,7 @@
-import StyledText from "@/components/StyledText";
-import { StyleSheet, View } from "react-native";
+import IntervalServerError from "@/common/ErrorScreen/IntervalServerError";
 
 const Chats = () => {
-    return (
-        <View>
-            <StyledText>Home</StyledText>
-        </View>
-    );
-}
+  return <IntervalServerError />;
+};
 
-const styles = StyleSheet.create({
-    
-})
-export default Chats
+export default Chats;
