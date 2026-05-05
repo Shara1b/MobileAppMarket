@@ -1,10 +1,10 @@
-import EmptyFavorites from "@/common/EmptyFavorites";
+import PaymentRequired from "@/common/ErrorScreen/PaymentRequired";
 
 export default function HomeScreen() {
   const hasResults = false;
 
   if (!hasResults) {
-    return <EmptyFavorites />;
+    return <PaymentRequired />;
   }
 
   return null;

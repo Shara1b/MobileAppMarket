@@ -85,9 +85,6 @@ const styles = StyleSheet.create({
   blue_btn_text: {
     color: COLORS.SEMI_BLUE_COLOR,
   },
-  overlarge: {
-    fontSize: 64,
-  },
   large: {
     fontSize: 32,
     lineHeight: 35.2,

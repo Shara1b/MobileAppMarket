@@ -5,10 +5,10 @@ import { StyleSheet, View } from "react-native";
 const MainContent = () => {
   return (
     <View style={styles.container}>
-      <StyledText size="large">😕</StyledText>
+      <StyledText size="large">💸</StyledText>
       <View style={styles.box}>
         <StyledText variant="title" size="medium-large">
-          Что-то пошло не так
+          Платёж не прошёл
         </StyledText>
         <View style={styles.substilte}>
           <StyledText
@@ -16,12 +16,12 @@ const MainContent = () => {
             size="medium"
             style={{ textAlign: "center" }}
           >
-            Произошла непредвиденная ошибка. Пожалуйста, попробуйте еще раз или
-            обратитесь в поддержку.
+            К сожалению, не удалось завершить платёж. Проверьте данные карты и
+            попробуйте снова.
           </StyledText>
         </View>
         <StyledText variant="subtitle-grey" size="ower-small">
-          ERR_500 • 5 апреля, 14:23
+          PAY_ERR_402 • 5 апреля, 14:23
         </StyledText>
       </View>
     </View>
