@@ -1,10 +1,10 @@
-import EmptySearchResult from "@/common/EmptySearchResult";
+import Conflict from "@/common/ErrorScreen/Conflict";
 
 export default function SearchScreen() {
   const hasResults = false;
 
   if (!hasResults) {
-    return <EmptySearchResult />;
+    return <Conflict />;
   }
 
   return null;
