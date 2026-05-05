@@ -1,7 +1,8 @@
+import StarIconCircule from "@/components/Icons/StarIconCircule";
 import StyledButton from "@/components/StyledButton";
 import StyledText from "@/components/StyledText";
 import { COLORS } from "@/constants/color.const";
-import { Image, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 const EmptyDailyMatches = () => {
   const handleAIPick = () => {
@@ -10,21 +11,43 @@ const EmptyDailyMatches = () => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.iconContainer}>
-        <Image
-          source={require("../assets/images/ContainerStar.png")}
-          style={styles.icon}
-        />
-      </View>
+      <View></View>
+      <StarIconCircule
+        width={80}
+        height={80}
+        color={COLORS.PRIMARY_BORDER_COLOR}
+      />
 
-      <StyledText style={styles.title}>Сегодня нет новых совпадений</StyledText>
+      <StyledText
+        variant="title"
+        size="regular"
+        style={{ marginBottom: 7, marginTop: 16, textAlign: "center" }}
+      >
+        Сегодня нет новых совпадений
+      </StyledText>
 
-      <StyledText style={styles.subtitle}>
+      <StyledText
+        variant="subtitle-grey"
+        size="small"
+        style={{
+          textAlign: "center",
+          marginBottom: 15,
+          width: 245,
+        }}
+      >
         Мы уведомим вас, когда появятся проекты, подходящие под ваш профиль
       </StyledText>
 
-      <StyledButton onPress={handleAIPick} variant="up-portfolio-btn">
-        <StyledText style={styles.buttonText}>
+      <StyledButton
+        onPress={handleAIPick}
+        variant="forms-transparent-btn"
+        style={{ height: 72 }}
+      >
+        <StyledText
+          variant="button-text-grey"
+          size="small"
+          style={{ textAlign: "center" }}
+        >
           💡 Обновите портфолио и навыки для лучших совпадений
         </StyledText>
       </StyledButton>
@@ -50,31 +73,6 @@ const styles = StyleSheet.create({
   icon: {
     width: 80,
     height: 80,
-  },
-  title: {
-    maxWidth: 193,
-    fontSize: 20,
-    fontWeight: "700",
-    color: COLORS.TITLE_GREY,
-    textAlign: "center",
-    marginBottom: 8,
-  },
-  subtitle: {
-    fontSize: 14,
-    fontWeight: "400",
-    color: COLORS.SUBTITLE_GREY,
-    textAlign: "center",
-    marginBottom: 3.4,
-    lineHeight: 21,
-  },
-  buttonText: {
-    flex: 1,
-    width: 244,
-    fontSize: 13,
-    fontWeight: "400",
-    color: COLORS.PRIMARY_BUTTON_TEXT_DARK,
-    textAlign: "center",
-    lineHeight: 20,
   },
 });
 export default EmptyDailyMatches;

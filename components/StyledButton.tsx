@@ -3,12 +3,12 @@ import { COLORS } from "@/constants/color.const";
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import {
-    Image,
-    ImageSourcePropType,
-    StyleSheet,
-    TouchableOpacity,
-    TouchableOpacityProps,
-    View,
+  Image,
+  ImageSourcePropType,
+  StyleSheet,
+  TouchableOpacity,
+  TouchableOpacityProps,
+  View,
 } from "react-native";
 import { VariantText } from "../types/typeText.type";
 import StyledText from "./StyledText";
@@ -187,6 +187,7 @@ const styles = StyleSheet.create({
     height: 48,
   },
   forms_transparent_btn: {
+    backgroundColor: "transparent",
     borderWidth: 0.8,
     borderColor: COLORS.PRIMARY_BORDER_GREY,
     borderRadius: 14,
@@ -232,9 +233,12 @@ const styles = StyleSheet.create({
     borderColor: COLORS.BG_CARD_ACTIVE,
     borderRadius: 14,
     borderWidth: 0.8,
+    textAlign: "center",
     padding: 17,
     width: 300,
     minHeight: 73,
+    justifyContent: "center",
+    alignItems: "center",
     elevation: 0,
   },
 });

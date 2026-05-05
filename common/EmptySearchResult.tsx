@@ -15,17 +15,33 @@ const EmptySearchResult = () => {
         <Ionicons name="search-outline" size={40} color="#9CA3AF" />
       </View>
 
-      <StyledText style={styles.title}>Ничего не найдено</StyledText>
+      <StyledText
+        variant="title"
+        size="regular"
+        style={{ marginBottom: 8, marginTop: 16 }}
+      >
+        Ничего не найдено
+      </StyledText>
 
-      <StyledText style={styles.subtitle}>
+      <StyledText
+        variant="subtitle-grey"
+        size="small"
+        style={{
+          textAlign: "center",
+          marginBottom: 24.4,
+          width: 244,
+        }}
+      >
         Попробуйте изменить фильтры или ключевые слова для поиска
       </StyledText>
 
-      <StyledButton onPress={handleAIPick} variant="outline-btn">
-        <StyledText style={styles.buttonText}>
-          Посмотреть AI подборку
-        </StyledText>
-      </StyledButton>
+      <StyledButton
+        onPress={handleAIPick}
+        variant="outline-btn"
+        style={{ width: 226 }}
+        lable="Посмотреть AI подборку"
+        variantText="button-text-blue"
+      />
     </View>
   );
 };
@@ -44,31 +60,6 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.TAG_BG,
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 15,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "700",
-    color: COLORS.TITLE_GREY,
-    textAlign: "center",
-    marginBottom: 8,
-    marginTop: 16,
-  },
-  subtitle: {
-    fontSize: 14,
-    fontWeight: "400",
-    color: COLORS.SUBTITLE_GREY,
-    textAlign: "center",
-    marginBottom: 24.4,
-    lineHeight: 21,
-  },
-  buttonText: {
-    flex: 1,
-    fontSize: 14,
-    fontWeight: "600",
-    color: COLORS.PRIMARY_BUTTON_TEXT,
-    textAlign: "center",
-    lineHeight: 21,
   },
 });
 
