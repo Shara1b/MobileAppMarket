@@ -3,13 +3,15 @@ import StyledText from "@/components/StyledText";
 import { COLORS } from "@/constants/color.const";
 import { StyleSheet, View } from "react-native";
 
-const ControllerContent = () => {
-  const btnData = ["Попробовать снова", "Вернуться назад"];
+type ControllerContentProps = {
+  buttons: string[];
+};
 
+const ControllerContent: React.FC<ControllerContentProps> = ({ buttons }) => {
   return (
     <View style={styles.container}>
       <View style={styles.btn}>
-        {btnData.map((item, index) => (
+        {buttons.map((item, index) => (
           <StyledButton
             key={index}
             variant="outline-btn"

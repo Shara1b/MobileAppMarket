@@ -2,13 +2,33 @@ import StyledText from "@/components/StyledText";
 import { COLORS } from "@/constants/color.const";
 import { StyleSheet, View } from "react-native";
 
-const MainContent = () => {
+type MainContentProps = {
+  smille: string;
+  title: string;
+  description: string;
+  errorCode: string;
+};
+
+const MainContent: React.FC<MainContentProps> = ({
+  smille,
+  title,
+  description,
+  errorCode,
+}) => {
+  const now = new Date();
+  const time = now.toLocaleDateString("ru-RU", {
+    day: "numeric",
+    month: "long",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+
   return (
     <View style={styles.container}>
-      <StyledText size="large">😕</StyledText>
+      <StyledText size="large">{smille}</StyledText>
       <View style={styles.box}>
         <StyledText variant="title" size="medium-large">
-          Что-то пошло не так
+          {title}
         </StyledText>
         <View style={styles.substilte}>
           <StyledText
@@ -16,12 +36,11 @@ const MainContent = () => {
             size="medium"
             style={{ textAlign: "center" }}
           >
-            Произошла непредвиденная ошибка. Пожалуйста, попробуйте еще раз или
-            обратитесь в поддержку.
+            {description}
           </StyledText>
         </View>
         <StyledText variant="subtitle-grey" size="ower-small">
-          ERR_500 • 5 апреля, 14:23
+          {errorCode} • {time}
         </StyledText>
       </View>
     </View>
