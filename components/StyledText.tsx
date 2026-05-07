@@ -13,7 +13,8 @@ type StyledTextProps = TextProps & {
     | "secondary"
     | "ower-small"
     | "semi-large"
-    | "medium-large";
+    | "medium-large"
+    | "ower-large";
   children?: React.ReactNode;
 };
 
@@ -45,6 +46,7 @@ const StyledText: React.FC<StyledTextProps> = ({
         size === "secondary" ? styles.secondary : null,
         size === "semi-large" ? styles.semi_large : null,
         size === "medium-large" ? styles.medium_large : null,
+        size === "ower-large" ? styles.ower_large : null,
       ]}
     >
       {children}
@@ -89,6 +91,11 @@ const styles = StyleSheet.create({
   },
   blue_btn_text: {
     color: COLORS.SEMI_BLUE_COLOR,
+  },
+  ower_large: {
+    fontSize: 60,
+    lineHeight: 65,
+    letterSpacing: 0,
   },
   large: {
     fontSize: 32,

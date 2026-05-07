@@ -1,6 +1,7 @@
 import StyledButton from "@/components/StyledButton";
 import StyledText from "@/components/StyledText";
 import { StyleSheet, View } from "react-native";
+import SubstitleContent from "./SubstilteContent";
 
 const ComingSoon = () => {
   return (
@@ -16,6 +17,7 @@ const ComingSoon = () => {
           lable="Выйти"
         />
       </View>
+      <SubstitleContent />
     </View>
   );
 };
