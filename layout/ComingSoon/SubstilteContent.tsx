@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
   },
   box: {
     marginTop: 28,
+    marginBottom: 40,
     justifyContent: "center",
     alignItems: "center",
   },

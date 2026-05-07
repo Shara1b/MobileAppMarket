@@ -1,6 +1,7 @@
 import StyledButton from "@/components/StyledButton";
 import StyledText from "@/components/StyledText";
 import { StyleSheet, View } from "react-native";
+import EarlyAccessSection from "./EarlyAccessSection";
 import SubstitleContent from "./SubstilteContent";
 
 const ComingSoon = () => {
@@ -18,6 +19,7 @@ const ComingSoon = () => {
         />
       </View>
       <SubstitleContent />
+      <EarlyAccessSection targetDate={new Date("2026-06-16T00:00:00")} />
     </View>
   );
 };

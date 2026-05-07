@@ -6,4 +6,5 @@ export type VariantText =
   | "tag"
   | "subtitle-grey"
   | "blue-btn-text"
-  | "logo";
+  | "logo"
+  | "timer-value";

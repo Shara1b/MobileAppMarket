@@ -37,6 +37,7 @@ const StyledText: React.FC<StyledTextProps> = ({
         variant === "button-text-grey" ? styles.button_text_grey : null,
         variant === "subtitle-grey" ? styles.subtitle_grey : null,
         variant === "blue-btn-text" ? styles.blue_btn_text : null,
+        variant === "timer-value" ? styles.timer_value : null,
         variant === "logo" ? styles.logo : null,
         variant === "tag" ? styles.tag : null,
         size === "large" ? styles.large : null,
@@ -64,6 +65,10 @@ const styles = StyleSheet.create({
   title: {
     color: COLORS.TITLE_GREY,
     fontWeight: 700,
+  },
+  timer_value: {
+    color: COLORS.PRIMARY_BUTTON_COLOR,
+    fontWeight: "semibold",
   },
   subtitle: {
     color: COLORS.TITLE_GREY,
