@@ -1,28 +1,35 @@
 import StyledButton from "@/components/StyledButton";
+import StyledInputLable from "@/components/StyledInputLable";
 import StyledText from "@/components/StyledText";
 import { COLORS } from "@/constants/color.const";
 import { Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
-import { StyleSheet, TextInput, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 const EarlyAccessForm = () => {
   const [email, setEmail] = useState("");
 
   return (
     <View style={styles.container}>
-      <StyledText variant="title" size="regular">
+      <StyledText variant="title" size="regular" style={{ marginBottom: 25 }}>
         Получите ранний доступ
       </StyledText>
-      <View style={styles.input}>
-        <Ionicons name="mail-outline" size={20} color="#9CA3AF" />
-        <TextInput
-          placeholder="Введите ваш email"
-          value={email}
-          onChangeText={setEmail}
-          keyboardType="email-address"
-          autoCapitalize="none"
-        />
-      </View>
+      <StyledInputLable
+        placeholder="Введите ваш email"
+        value={email}
+        onChangeText={setEmail}
+        keyboardType="email-address"
+        autoCapitalize="none"
+        variant="forms-input"
+        leftIcon={
+          <Ionicons
+            name="mail-outline"
+            size={20}
+            color="#9CA3AF"
+            style={{ marginRight: 10 }}
+          />
+        }
+      />
       <StyledButton
         variant="forms-btn"
         style={{
@@ -68,19 +75,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginTop: 40,
-  },
-  input: {
-    width: "100%",
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 10,
-    borderWidth: 0.8,
-    borderColor: "#E5E5EA",
-    borderRadius: 14,
-    paddingHorizontal: 16,
-    paddingVertical: 5,
-    backgroundColor: "#FFFFFF",
-    marginTop: 25,
   },
   footer: {
     alignItems: "center",

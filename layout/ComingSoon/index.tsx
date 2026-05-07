@@ -3,9 +3,28 @@ import StyledText from "@/components/StyledText";
 import { ScrollView, StyleSheet, View } from "react-native";
 import EarlyAccessForm from "./EarlyAccessForm";
 import EarlyAccessSection from "./EarlyAccessSection";
+import EarlyBirdBenefits from "./EarlyBirdBenefits";
 import SubstitleContent from "./SubstilteContent";
 
 const ComingSoon = () => {
+  const dataCard = [
+    {
+      smille: "🎁",
+      title: "Комиссия 0%",
+      description: "0%  комиссии на все сделки после запуска.",
+    },
+    {
+      smille: "⚡",
+      title: "Приоритетный подбор",
+      description: "Получите доступ к заказам раньше всех",
+    },
+    {
+      smille: "💎",
+      title: "Пожизненные привилегии",
+      description: "Навсегда сохраните лучшие условия",
+    },
+  ];
+
   return (
     <ScrollView
       style={{ flex: 1, backgroundColor: "#fff" }}
@@ -26,6 +45,7 @@ const ComingSoon = () => {
         <SubstitleContent />
         <EarlyAccessSection targetDate={new Date("2026-06-16T00:00:00")} />
         <EarlyAccessForm />
+        <EarlyBirdBenefits data={dataCard} />
       </View>
     </ScrollView>
   );
