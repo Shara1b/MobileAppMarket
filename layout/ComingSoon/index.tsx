@@ -1,32 +1,40 @@
 import StyledButton from "@/components/StyledButton";
 import StyledText from "@/components/StyledText";
-import { StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
+import EarlyAccessForm from "./EarlyAccessForm";
 import EarlyAccessSection from "./EarlyAccessSection";
 import SubstitleContent from "./SubstilteContent";
 
 const ComingSoon = () => {
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <StyledText variant="logo" size="regular">
-          Light
-        </StyledText>
-        <StyledButton
-          variant="transparment"
-          variantText="tag"
-          sizeText="medium"
-          lable="Выйти"
-        />
+    <ScrollView
+      style={{ flex: 1, backgroundColor: "#fff" }}
+      contentContainerStyle={{ flexGrow: 1 }}
+    >
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <StyledText variant="logo" size="regular">
+            Light
+          </StyledText>
+          <StyledButton
+            variant="transparment"
+            variantText="tag"
+            sizeText="medium"
+            lable="Выйти"
+          />
+        </View>
+        <SubstitleContent />
+        <EarlyAccessSection targetDate={new Date("2026-06-16T00:00:00")} />
+        <EarlyAccessForm />
       </View>
-      <SubstitleContent />
-      <EarlyAccessSection targetDate={new Date("2026-06-16T00:00:00")} />
-    </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: "100%",
     paddingVertical: 20,
     paddingHorizontal: 20,
     backgroundColor: "#fff",
