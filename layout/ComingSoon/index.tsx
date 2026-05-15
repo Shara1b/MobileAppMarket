@@ -1,10 +1,12 @@
 import StyledButton from "@/components/StyledButton";
 import StyledText from "@/components/StyledText";
+import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 import EarlyAccessForm from "./EarlyAccessForm";
 import EarlyAccessSection from "./EarlyAccessSection";
 import EarlyBirdBenefits from "./EarlyBirdBenefits";
 import SubstitleContent from "./SubstilteContent";
+import TelegramJoinContent from "./TelegramJoinContent";
 
 const ComingSoon = () => {
   const dataCard = [
@@ -24,6 +26,7 @@ const ComingSoon = () => {
       description: "Навсегда сохраните лучшие условия",
     },
   ];
+  const footerLinks = ["Конфиденциальность", "Условия", "Контакты"];
 
   return (
     <ScrollView
@@ -46,6 +49,29 @@ const ComingSoon = () => {
         <EarlyAccessSection targetDate={new Date("2026-06-16T00:00:00")} />
         <EarlyAccessForm />
         <EarlyBirdBenefits data={dataCard} />
+        <TelegramJoinContent />
+        <View style={styles.footer}>
+          <StyledText variant="subtitle-grey" size="ower-small">
+            © 2026 Light. Все права защищены.
+          </StyledText>
+          <View style={styles.links}>
+            {footerLinks.map((link, index) => (
+              <React.Fragment key={index}>
+                <StyledText variant="tag" size="ower-small">
+                  {link}
+                </StyledText>
+                {index < footerLinks.length - 1 && (
+                  <StyledText
+                    size="medium"
+                    style={{ color: "#E5E5EA", fontWeight: 400 }}
+                  >
+                    •
+                  </StyledText>
+                )}
+              </React.Fragment>
+            ))}
+          </View>
+        </View>
       </View>
     </ScrollView>
   );
@@ -64,6 +90,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     marginBottom: 40,
+  },
+  footer: {
+    justifyContent: "space-between",
+    alignItems: "center",
+    gap: 14,
+  },
+  links: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 12,
+    paddingVertical: 20,
   },
 });
 
