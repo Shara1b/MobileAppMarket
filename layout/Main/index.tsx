@@ -1,11 +1,11 @@
 import { StyleSheet, View } from "react-native";
-import ComingSoon from "../ComingSoon";
+import EditProfile from "../Screens/Profile/EditProfile";
 
 const Main = () => {
   return (
     <View style={styles.container}>
       {/* <NavigatePanel/> */}
-      <ComingSoon />
+      <EditProfile />
     </View>
   );
 };
