@@ -8,6 +8,7 @@ import StyledText from "@/components/StyledText";
 
 import { useForm } from "@/hooks/useForm";
 import { useProfileProgress } from "@/hooks/useProfileProgress";
+import AboutSection from "./components/AboutSection";
 import BasicInfoSection from "./components/BasicInfoSection";
 import ProfileStrength from "./components/ProfileStrength";
 
@@ -62,6 +63,11 @@ const EditProfile = () => {
           }
           location={values.location}
           setLocation={(text) => handleChange("location", text)}
+        />
+
+        <AboutSection
+          about={values.about}
+          setAbout={(text) => handleChange("about", text)}
         />
       </ScrollView>
     </SafeAreaView>

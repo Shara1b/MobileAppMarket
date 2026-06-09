@@ -34,6 +34,7 @@ const StyledText: React.FC<StyledTextProps> = ({
         variant === "title" ? styles.title : null,
         variant === "subtitle" ? styles.subtitle : null,
         variant === "button-text-blue" ? styles.button_text_blue : null,
+        variant === "white-btn-text" ? styles.white_btn_text : null,
         variant === "button-text-grey" ? styles.button_text_grey : null,
         variant === "subtitle-grey" ? styles.subtitle_grey : null,
         variant === "blue-btn-text" ? styles.blue_btn_text : null,
@@ -48,6 +49,7 @@ const StyledText: React.FC<StyledTextProps> = ({
         size === "semi-large" ? styles.semi_large : null,
         size === "medium-large" ? styles.medium_large : null,
         size === "ower-large" ? styles.ower_large : null,
+        size === "ower-small" ? styles.ower_small : null,
       ]}
     >
       {children}
@@ -96,6 +98,10 @@ const styles = StyleSheet.create({
   },
   blue_btn_text: {
     color: COLORS.SEMI_BLUE_COLOR,
+  },
+  white_btn_text: {
+    color: COLORS.CARD_BG,
+    fontWeight: 600,
   },
   ower_large: {
     fontSize: 60,
