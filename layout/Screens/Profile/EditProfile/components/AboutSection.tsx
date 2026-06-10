@@ -73,7 +73,7 @@ const AboutSection = ({ about, setAbout }: AboutSectionProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 24,
+    marginBottom: 50,
     paddingHorizontal: 16,
   },
   header: {

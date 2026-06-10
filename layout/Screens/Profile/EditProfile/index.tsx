@@ -11,6 +11,7 @@ import { useProfileProgress } from "@/hooks/useProfileProgress";
 import AboutSection from "./components/AboutSection";
 import BasicInfoSection from "./components/BasicInfoSection";
 import ProfileStrength from "./components/ProfileStrength";
+import SkillsSection from "./components/SkillsSection";
 
 const EditProfile = () => {
   const navigation = useNavigation();
@@ -69,6 +70,8 @@ const EditProfile = () => {
           about={values.about}
           setAbout={(text) => handleChange("about", text)}
         />
+
+        <SkillsSection />
       </ScrollView>
     </SafeAreaView>
   );
